@@ -1,13 +1,16 @@
-import { Route, Routes } from 'react-router-dom'
+import {Route, Routes} from 'react-router-dom'
+import {DefaultLayout} from "./layouts/DefaultLayout";
+import {Home} from "./pages/Home";
+import {Checkout} from "./pages/Checkout";
 
 export function Router() {
     return (
         <Routes>
-            {/*ToDo - Criar default layout */}
-            <Route path="/">
-                {/*ToDo - Adicionar as rotas conforme for criando as pages dentro do layout */}
-                <Route path="/" />
+            <Route path="/" element={<DefaultLayout/>}>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/checkout" element={<Checkout/>}/>
             </Route>
         </Routes>
     )
 }
+
