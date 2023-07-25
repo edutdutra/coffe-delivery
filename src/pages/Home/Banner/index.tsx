@@ -8,7 +8,7 @@ import {
     Title
 } from "./styles.ts";
 
-import {Coffee, Package, ShoppingCart, Timer} from "@phosphor-icons/react";
+import {Coffee, Package, ShoppingCartSimple, Timer} from "@phosphor-icons/react";
 import coffeeHome from "../../../assets/coffee-home.svg";
 
 export function Banner() {
@@ -22,7 +22,7 @@ export function Banner() {
                     <BannerItemsColumn>
                         <BannerItem>
                             <IconCircle circleColor="yellowDark">
-                                <ShoppingCart size={16} weight="fill"/>
+                                <ShoppingCartSimple size={16} weight="fill"/>
                             </IconCircle>
                             <span>Compra simples e segura</span>
                         </BannerItem>

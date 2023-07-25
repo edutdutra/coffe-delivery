@@ -1,6 +1,7 @@
 import {Banner} from "./Banner";
 
 import {HomeContainer} from "./styles.ts";
+import {CoffeeCard} from "./CoffeeCard";
 
 
 export function Home() {
@@ -8,7 +9,7 @@ export function Home() {
         <HomeContainer>
             <Banner />
 
-            <span>LISTA DE CAFÉS</span>
+            <CoffeeCard />
         </HomeContainer>
     )
 }
