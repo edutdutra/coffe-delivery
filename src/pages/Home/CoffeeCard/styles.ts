@@ -5,12 +5,16 @@ export const CoffeeCardContainer = styled.div`
   border-radius: 6px 36px;
   max-width: 256px;
   padding: 20px;
+`
 
+export const CoffeeCardContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  
+  margin-bottom: 2rem;
 `
 
 export const TagContainer = styled.div`
@@ -56,7 +60,7 @@ export const CoffeeDescription = styled.span`
 
 export const CoffeeCardFooter = styled.div`
   display: flex;
-  max-width: 100%;
+  width: 100%;
 
   align-items: center;
   justify-content: space-between;
@@ -77,17 +81,32 @@ export const MoneySign = styled.span`
 
   color: ${(props) => props.theme['base-text']};
   text-align: right;
-  margin-right: 0.20rem;
 `
 
 export const CartButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   padding: 8px;
   border: 0;
   border-radius: 6px;
   background: ${(props) => props.theme['purple-dark']};
   color: ${(props) => props.theme['base-card']};
+
+  &:hover {
+    background: ${(props) => props.theme['purple']};
+  }
+`
+
+export const PriceContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.20rem;
+`
+
+export const InteractionContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 `

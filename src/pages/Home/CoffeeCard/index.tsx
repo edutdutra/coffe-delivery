@@ -1,35 +1,42 @@
 import {
     CartButton,
-    CoffeeCardContainer,
+    CoffeeCardContainer, CoffeeCardContent,
     CoffeeCardFooter,
     CoffeeDescription,
     CoffeeName, CoffeePrice,
-    CoffeeTag, MoneySign,
+    CoffeeTag, InteractionContainer, MoneySign, PriceContainer,
     TagContainer
 } from "./styles.ts";
 
 import cafeExpresso from "../../../assets/cafe-expresso.png";
 import {ShoppingCartSimple} from "@phosphor-icons/react";
+import {InputNumber} from "../../../components/InputNumber";
 
 export function CoffeeCard() {
     return (
         <CoffeeCardContainer>
-            <img src={cafeExpresso} alt=""/>
-            <TagContainer>
-                <CoffeeTag>tradicional</CoffeeTag>
-            </TagContainer>
+            <CoffeeCardContent>
+                <img src={cafeExpresso} alt=""/>
+                <TagContainer>
+                    <CoffeeTag>tradicional</CoffeeTag>
+                </TagContainer>
 
-            <CoffeeName>Expresso Tradicional</CoffeeName>
-            <CoffeeDescription>O tradicional café feito com água quente e grãos moídos</CoffeeDescription>
+                <CoffeeName>Expresso Tradicional</CoffeeName>
+                <CoffeeDescription>O tradicional café feito com água quente e grãos moídos</CoffeeDescription>
+            </CoffeeCardContent>
 
             <CoffeeCardFooter>
-                <MoneySign>R$</MoneySign>
-                <CoffeePrice>9,90</CoffeePrice>
+                <PriceContainer>
+                    <MoneySign>R$</MoneySign>
+                    <CoffeePrice>9,90</CoffeePrice>
+                </PriceContainer>
 
-
-                <CartButton>
-                    <ShoppingCartSimple size={22} weight="fill"/>
-                </CartButton>
+                <InteractionContainer>
+                    <InputNumber/>
+                    <CartButton>
+                        <ShoppingCartSimple size={22} weight="fill"/>
+                    </CartButton>
+                </InteractionContainer>
             </CoffeeCardFooter>
         </CoffeeCardContainer>
     )
