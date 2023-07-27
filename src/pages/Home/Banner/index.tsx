@@ -3,13 +3,14 @@ import {
     BannerContent,
     BannerItem,
     BannerItemsColumn,
-    BannerItemsContainer, IconCircle,
+    BannerItemsContainer,
     Subtitle,
     Title
 } from "./styles.ts";
 
 import {Coffee, Package, ShoppingCartSimple, Timer} from "@phosphor-icons/react";
 import coffeeHome from "../../../assets/coffee-home.svg";
+import {IconCircle} from "../../../components/IconCircle";
 
 export function Banner() {
     return (

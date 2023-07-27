@@ -45,29 +45,3 @@ export const BannerItem = styled.div`
   display: flex;
   align-items: center;
 `
-
-const CIRCLE_COLORS = {
-    yellow: 'yellow',
-    yellowDark: 'yellow-dark',
-    gray: 'base-text',
-    purple: 'purple'
-}
-
-interface IconCircleProps {
-    circleColor: keyof typeof CIRCLE_COLORS
-}
-
-export const IconCircle = styled.div<IconCircleProps>`
-  width: 2rem;
-  height: 2rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 0.75rem;
-
-  background: ${(props) => props.theme[CIRCLE_COLORS[props.circleColor]]};
-  color: ${(props) => props.theme['background']};
-
-  border-radius: 1000px;
-`
