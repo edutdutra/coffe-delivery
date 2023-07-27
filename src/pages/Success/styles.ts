@@ -22,11 +22,36 @@ export const SuccessSubTitle = styled.h2`
   color: ${(props) => props.theme['base-subtitle']};
 `
 
-export const SuccessContent = styled.div``
+export const SuccessContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  
+  width: 100%;
+  margin-top: 2.5rem;
+`
 
 export const OrderInfoCard = styled.div`
   display: flex;
   flex-direction: column;
-  
+
+
   border-radius: 6px 36px;
+  padding: 2.5rem;
+  gap: 2rem;
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: ${(props) => props.theme['purple']};
+    // border-image: linear-gradient(${(props) => props.theme['yellow']}, ${(props) => props.theme['purple']}) 30;
+  
+  div {
+    display: flex;
+    flex-direction: row;
+  }
+`
+
+export const OrderInfoText = styled.span`
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
 `
