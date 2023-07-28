@@ -23,9 +23,15 @@ export function Success() {
                             <MapPin size={16} weight="fill"/>
                         </IconCircle>
 
-                        <OrderInfoText>
-                            Entrega em Rua João Daniel Martinelli, 102 Farrapos - Porto Alegre, RS
-                        </OrderInfoText>
+                        <div>
+                            <OrderInfoText>
+                                Entrega em <b> Rua João Daniel Martinelli, 102 </b>
+                            </OrderInfoText>
+
+                            <OrderInfoText>
+                                Farrapos - Porto Alegre, RS
+                            </OrderInfoText>
+                        </div>
                     </div>
 
                     <div>
@@ -33,9 +39,14 @@ export function Success() {
                             <Timer size={16} weight="fill"/>
                         </IconCircle>
 
-                        <OrderInfoText>
-                            Entrega em Rua João Daniel Martinelli, 102 Farrapos - Porto Alegre, RS
-                        </OrderInfoText>
+                        <div>
+                            <OrderInfoText>
+                                Previsão de entrega
+                            </OrderInfoText>
+                            <OrderInfoText>
+                                <b>20 min - 30 min</b>
+                            </OrderInfoText>
+                        </div>
                     </div>
 
                     <div>
@@ -43,9 +54,15 @@ export function Success() {
                             <CurrencyDollar size={16}/>
                         </IconCircle>
 
-                        <OrderInfoText>
-                            Entrega em Rua João Daniel Martinelli, 102 Farrapos - Porto Alegre, RS
-                        </OrderInfoText>
+                        <div>
+                            <OrderInfoText>
+                                Pagamento na entrega
+                            </OrderInfoText>
+
+                            <OrderInfoText>
+                                <b>Cartão de Crédito</b>
+                            </OrderInfoText>
+                        </div>
                     </div>
                 </OrderInfoCard>
 

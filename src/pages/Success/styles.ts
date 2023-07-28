@@ -47,6 +47,11 @@ export const OrderInfoCard = styled.div`
   div {
     display: flex;
     flex-direction: row;
+    
+    div {
+      display: flex;
+      flex-direction: column;
+    }
   }
 `
 
@@ -54,4 +59,8 @@ export const OrderInfoText = styled.span`
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   font-weight: 400;
+  
+  b {
+    font-weight: 700;
+  }
 `
