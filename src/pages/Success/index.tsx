@@ -1,3 +1,6 @@
+import {IconCircle} from "../../components/IconCircle";
+import {CurrencyDollar, MapPin, Timer} from "@phosphor-icons/react";
+
 import {
     OrderInfoCard,
     OrderInfoText,
@@ -6,9 +9,9 @@ import {
     SuccessSubTitle,
     SuccessTitle
 } from "./styles.ts";
+
 import imgSuccess from "../../assets/img-success.svg";
-import {IconCircle} from "../../components/IconCircle";
-import {CurrencyDollar, MapPin, Timer} from "@phosphor-icons/react";
+
 
 export function Success() {
     return (
