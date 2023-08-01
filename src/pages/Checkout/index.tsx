@@ -1,38 +1,43 @@
-import {AddressFormContainer, AddressFormHeader, BaseFormInput, CheckoutContainer, CheckoutTitle} from "./styles.ts";
-import {MapPinLine} from "@phosphor-icons/react";
+import {CheckoutForm} from "./CheckoutForm";
+import {CurrencyDollar, MapPinLine} from "@phosphor-icons/react";
+
+import {CheckoutBaseCard, CheckoutCardHeader, CheckoutColumn, CheckoutContainer, CheckoutTitle} from "./styles.ts";
 
 export function Checkout() {
     return (
         <CheckoutContainer>
-            <AddressFormContainer>
-                <CheckoutTitle>Complete seu pedido</CheckoutTitle>
+            <form action="">
+                <CheckoutColumn>
+                    <CheckoutTitle>Complete seu pedido</CheckoutTitle>
+                    <CheckoutBaseCard>
+                        <CheckoutCardHeader iconColor="yellowDark">
+                            <MapPinLine size={24}/>
+                            <div>
+                                <h2>Endereço de Entrega</h2>
+                                <span>Informe o endereço onde deseja receber seu pedido</span>
+                            </div>
+                        </CheckoutCardHeader>
+                        <CheckoutForm/>
+                    </CheckoutBaseCard>
 
-                <form action="">
-                    <AddressFormHeader>
-                        <MapPinLine size={24}/>
-                        <div>
-                            <h2>Endereço de Entrega</h2>
-                            <span>Informe o endereço onde deseja receber seu pedido</span>
-                        </div>
-                    </AddressFormHeader>
+                    <CheckoutBaseCard>
+                        <CheckoutCardHeader iconColor="purple">
+                            <CurrencyDollar size={24}/>
+                            <div>
+                                <h2>Pagamento</h2>
+                                <span>O pagamento é feito na entrega. Escolha a forma que deseja pagar</span>
+                            </div>
+                        </CheckoutCardHeader>
+                    </CheckoutBaseCard>
+                </CheckoutColumn>
 
-                    <BaseFormInput placeholder="CEP" />
-                    <BaseFormInput placeholder="Rua" />
+                <CheckoutColumn>
+                    <CheckoutTitle>Cafés selecionados</CheckoutTitle>
+                    <CheckoutBaseCard>
 
-                    <div>
-                        <BaseFormInput placeholder="Número" />
-                        <BaseFormInput placeholder="Complemento" />
-                    </div>
-
-                    <div>
-                        <BaseFormInput placeholder="Bairro" />
-                        <BaseFormInput placeholder="Cidade" />
-                        <BaseFormInput placeholder="UF" />
-                    </div>
-
-                </form>
-            </AddressFormContainer>
-
+                    </CheckoutBaseCard>
+                </CheckoutColumn>
+            </form>
         </CheckoutContainer>
     )
 }

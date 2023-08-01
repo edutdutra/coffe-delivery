@@ -1,10 +1,28 @@
 import styled from "styled-components";
 
+const ICON_COLOR = {
+    yellowDark: 'yellow-dark',
+    purple: 'purple'
+} as const
+
+export interface CheckoutCardHeaderProps {
+    iconColor: keyof typeof ICON_COLOR
+}
+
 export const CheckoutContainer = styled.div`
   display: flex;
-  padding: 4rem 0;
   
+  form {
+    display: flex;
+    padding: 4rem 0;
+    gap: 32px;
+  }
+`
+export const CheckoutColumn = styled.div`
+  display: flex;
   flex-direction: column;
+
+  gap: 16px;
 `
 
 export const CheckoutTitle = styled.h1`
@@ -13,31 +31,21 @@ export const CheckoutTitle = styled.h1`
   font-weight: 700;
 `
 
-export const AddressFormContainer = styled.div`
+export const CheckoutBaseCard = styled.div`
   display: flex;
   flex-direction: column;
+  background: ${(props) => props.theme['base-card']};
+  border-radius: 6px;
 
-  form {
-    background: ${(props) => props.theme['base-card']};
-    padding: 4.5rem;
-    border-radius: 6px;
-    
-    div {
-      display: flex;
-      flex-direction: row;
-    }
-  }
+  padding: 2.5rem;
+  gap: 2rem;
 `
 
-export const AddressFormHeader = styled.div`
+export const CheckoutCardHeader = styled.div<CheckoutCardHeaderProps>`
   display: flex;
-  flex-direction: row;
 
-  align-items: start;
+  color: ${(props) => props.theme[ICON_COLOR[props.iconColor]]};
   gap: 8px;
-  margin-bottom: 32px;
-
-  color: ${(props) => props.theme['yellow-dark']};
 
   div {
     display: flex;
@@ -54,27 +62,4 @@ export const AddressFormHeader = styled.div`
       font-size: 14px;
       font-weight: 400;
     }
-  }
 `
-
-export const BaseFormInput = styled.input`
-  display: flex;
-  padding: 12px;
-  border-radius: 4px;
-  align-items: center;
-  
-  font-size: 14px;
-  
-  background: ${(props) => props.theme['base-input']};
-  border: 1px solid ${(props) => props.theme['base-button']};
-  
-  &:focus {
-    border: 1px solid ${(props) => props.theme['yellow-dark']};
-    outline: none;
-  }
-  
-  &::placeholder {
-    color: ${(props) => props.theme['base-label']};
-  }
-`
-
