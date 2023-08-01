@@ -2,6 +2,10 @@ import {CheckoutForm} from "./CheckoutForm";
 import {CurrencyDollar, MapPinLine} from "@phosphor-icons/react";
 
 import {CheckoutBaseCard, CheckoutCardHeader, CheckoutColumn, CheckoutContainer, CheckoutTitle} from "./styles.ts";
+import {PaymentSelect} from "./PaymentSelect";
+
+// ToDo - Finalizar card de pagamento
+// ToDo - Finalizar card de cafés selecionados
 
 export function Checkout() {
     return (
@@ -28,13 +32,14 @@ export function Checkout() {
                                 <span>O pagamento é feito na entrega. Escolha a forma que deseja pagar</span>
                             </div>
                         </CheckoutCardHeader>
+
+                        <PaymentSelect />
                     </CheckoutBaseCard>
                 </CheckoutColumn>
 
                 <CheckoutColumn>
                     <CheckoutTitle>Cafés selecionados</CheckoutTitle>
                     <CheckoutBaseCard>
-
                     </CheckoutBaseCard>
                 </CheckoutColumn>
             </form>
