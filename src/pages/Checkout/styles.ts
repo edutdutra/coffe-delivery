@@ -11,7 +11,8 @@ export interface CheckoutCardHeaderProps {
 
 export const CheckoutContainer = styled.div`
   display: flex;
-  
+  width: 100%;
+  flex-grow: 1;
   form {
     display: flex;
     padding: 4rem 0;
@@ -37,6 +38,9 @@ export const CheckoutBaseCard = styled.div`
   background: ${(props) => props.theme['base-card']};
   border-radius: 6px;
 
+  max-width: 640px;
+  
+  
   padding: 2.5rem;
   gap: 2rem;
 `

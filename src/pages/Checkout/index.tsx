@@ -3,6 +3,7 @@ import {CurrencyDollar, MapPinLine} from "@phosphor-icons/react";
 
 import {CheckoutBaseCard, CheckoutCardHeader, CheckoutColumn, CheckoutContainer, CheckoutTitle} from "./styles.ts";
 import {PaymentSelect} from "./PaymentSelect";
+import {ConfirmOrder} from "./ConfirmOrder";
 
 // ToDo - Finalizar card de pagamento
 // ToDo - Finalizar card de cafés selecionados
@@ -40,6 +41,7 @@ export function Checkout() {
                 <CheckoutColumn>
                     <CheckoutTitle>Cafés selecionados</CheckoutTitle>
                     <CheckoutBaseCard>
+                        <ConfirmOrder />
                     </CheckoutBaseCard>
                 </CheckoutColumn>
             </form>
